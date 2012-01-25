@@ -1,6 +1,14 @@
-This is the zoo's animals list:
-%ul#animals-list
-  -@animals.each do |animal|
-    =render partial: 'animals/animal', context: animal
+%h1 ZOO
+
+.animals
+  This is the zoo's animals list:
+
+  %ul#animals-list
+    -@animals.each do |animal|
+      =render partial: 'animals/animal', context: animal
 
 %a{href: "#load", id:"retrieve-button"} Retrieve animals
+
+.addnew
+  %input{id: "name"}
+  %a{href: "#add", id:"add-button"} Add
