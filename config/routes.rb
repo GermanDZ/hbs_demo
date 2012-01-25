@@ -1,7 +1,6 @@
 HbsDemo::Application.routes.draw do
+  root :to => redirect('/animals/index')
 
-  root :to => redirect('/animals')
-
-  resources :animals, only: [:index]
-
+  match 'animals/index' => 'animals#index'
+  match 'animals/index_hbs' => 'animals#index_hbs'
 end

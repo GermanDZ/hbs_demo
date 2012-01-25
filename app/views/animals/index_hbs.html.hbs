@@ -1,0 +1,14 @@
+<h1>ZOO</h1>
+<div class="animals">
+  This is the zoo"s animals list:
+  <ul id="animals-list">
+    {{#each animals}}
+      <li>I am {{name}}, a {{taxonomy}}, {{order}}, {{family}}</li>
+    {{/each}}
+  </ul>
+</div>
+<a href="#load" id="retrieve-button">Retrieve animals</a>
+<div class="addnew">
+  <input id="name">
+  <a href="#add" id="add-button">Add</a>
+</div>
