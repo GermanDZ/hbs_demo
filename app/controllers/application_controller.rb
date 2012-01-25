@@ -11,10 +11,11 @@ class ApplicationController < ActionController::Base
 
   def render_multi_view(options = {})
     action = options[:action] || params[:action]
+    action_json = options[:action_json] || action
     layout = options[:layout] || true
     respond_to do |wants|
       wants.html do
-        from_json_view(template: "#{action}.json.erb")
+        from_json_view(template: "#{action_json}.json.erb")
         render action, layout: layout
       end
       wants.json { render action }
