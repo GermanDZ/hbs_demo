@@ -1,0 +1,49 @@
+!!!
+%html
+  %head
+    %meta(charset="utf-8")
+
+    %title Handlebars on Rails
+
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    %link(href="../kinout/src-client/stylesheets/css/reset.css" rel="stylesheet")
+    %link(href="../kinout/src-client/stylesheets/css/layout.css" rel="stylesheet")
+    %link(href="../kinout/src-client/stylesheets/css/widgets.css" rel="stylesheet")
+
+    %link(href="../kinout/themes/kinout.grey.css" rel="stylesheet")
+    %link(href="assets/stylesheets/extend.css" rel="stylesheet")
+
+  %body
+    .kinout
+
+      %section
+        %h1
+          Handlebars on Rails
+        %h4
+          Templates are evil
+        
+      %section
+        %h3
+          ¿Por qué no usar Haml, ERB u otros?
+        %h4
+          Porque mi aplicación vive en el cliente, pero es un sitio web
+        %article
+          %p
+            %ul
+              %li
+                abusaremos de las actualizaciones AJAX
+              %li
+                datos en JSON nos permite reutilizarlos en la API (REST)
+              %li
+                más
+
+    %script(src="../kinout/src-client/javascripts/Kinout.js")
+    %script(src="../kinout/src-client/javascripts/kinout.Core.js")
+    %script(src="../kinout/src-client/javascripts/kinout.Dom.js")
+    %script(src="../kinout/src-client/javascripts/kinout.Router.js")
+    %script(src="../kinout/src-client/javascripts/Kinout.Events.js")
+    %script(src="../kinout/src-client/javascripts/Kinout.Url.js")
+    %script(src="../kinout/src-client/javascripts/Kinout.View.js")
+    %script
+      KINOUT.Core.init({ template: 'circle' });
