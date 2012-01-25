@@ -7,8 +7,9 @@ class ActionView::Template::Handlers::Handlebars
     <<-RUBY_CODE
       template = ActionView::Template::Handlers::Handlebars.template('#{template.virtual_path}', '#{template.source}');
       partial_renderer = @view_renderer.send(:_partial_renderer)
-      locals = partial_renderer.instance_variable_get('@locals')
-      context = partial_renderer.instance_variable_get('@options')[:context] || {}
+      locals = partial_renderer.instance_variable_get('@locals') || {}
+      options = partial_renderer.instance_variable_get('@options') || {}
+      context = options[:context] || {}
       rendered = ActionView::Template::Handlers::Handlebars.render(template, config, @_assigns, locals, context)
       rendered.html_safe
     RUBY_CODE
