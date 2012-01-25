@@ -1,11 +1,14 @@
 var animalTemplate;
+
 var showAnimals = function(animalsData) {
   $('#animals-list').children().remove();
-  $.each(animalsData.animals, renderAnimal);
+  $.map(animalsData.animals, renderAnimal);
 };
-var renderAnimal = function(idx, animal) {
+
+var renderAnimal = function(animal) {
   $('#animals-list').append(animalTemplate(animal));
 }
+
 var retrieveAnimals = function() {
   $.ajax({
     url: '/animals',
@@ -13,14 +16,23 @@ var retrieveAnimals = function() {
     success: showAnimals
   });
 };
-$(document).ready(function() {
-  $.ajax({
-    url: '/assets/animals.hbs',
-    success: function(templates) {
-      $(templates).appendTo('body');
-      animalTemplate = Handlebars.compile($('#animal').text());
-    }
-  }).then(function() {
-    $('#retrieve-button').bind('click', retrieveAnimals);
+
+var addAnimal = function() {
+  renderAnimal({
+    name: $('#name').val(),
+    taxonomy: 'mammal',
+    order: 'carnivora',
+    family: 'felidae'
   });
+}
+
+$.ajax({
+  url: '/assets/animals.hbs',
+  success: function(templates) {
+    $(templates).appendTo('body');
+    animalTemplate = Handlebars.compile($('#animal').text());
+  }
+}).then(function() {
+  $('#retrieve-button').bind('click', retrieveAnimals);
+  $('#add-button').bind('click', addAnimal);
 });
