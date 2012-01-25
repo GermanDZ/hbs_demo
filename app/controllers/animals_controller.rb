@@ -14,7 +14,7 @@ class AnimalsController < ApplicationController
     @animals << {name: "Ed", taxonomy: "mammal", order: "perissodactyla", family: "equidae"}
     @animals << {name: "Cattie", taxonomy: "mammal", order: "carnivora", family: "felidae"}
 
-    render_multi_view(action_json: 'animals/index')
+    render_multi_view(template_json: 'animals/index')
   end
 
 end
