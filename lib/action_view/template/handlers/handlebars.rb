@@ -5,7 +5,7 @@ class ActionView::Template::Handlers::Handlebars
 
   def call(template)
     <<-RUBY_CODE
-      template = ActionView::Template::Handlers::Handlebars.compile_template('#{template.virtual_path}', '#{template.source}');
+      template = ActionView::Template::Handlers::Handlebars.template('#{template.virtual_path}', '#{template.source}');
       partial_renderer = @view_renderer.send(:_partial_renderer)
       locals = partial_renderer.instance_variable_get('@locals')
       context = partial_renderer.instance_variable_get('@options')[:context] || {}
@@ -22,6 +22,14 @@ class ActionView::Template::Handlers::Handlebars
     vars = {}
     values.each {|v| vars.merge! v }
     template.call(vars.as_json)
+  end
+
+  def self.templates
+    @@templates ||= {}
+  end
+
+  def self.template(path, name)
+    templates[name] ||= ActionView::Template::Handlers::Handlebars.compile_template(path, name)
   end
 
   def self.compile_template(path, name)
