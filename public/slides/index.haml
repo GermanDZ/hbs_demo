@@ -18,26 +18,210 @@
     .kinout
 
       %section
-        %h1
-          Handlebars on Rails
+        %h1.handlebars_logo
+          Handlebars
+        %h1.handlebars_logo_subtitle
+          on
+          %span.mark Rails
         %h4
-          Templates are evil
-        
+          {{templates are evil}}
+        %p
+          madrid.rb
+        %p
+          26-Ene-2012 - GermanDZ
       %section
+        %h1.logo-1up
+          1uptalent
+          %img{src: 'assets/images/gdz_2012.png'}
+        %h2.alt
+          ¿Por qué?
         %h3
-          ¿Por qué no usar Haml, ERB u otros?
+          Aplicación vs CMS
+        %h3
+          AJAX vs ServerSide
+        %h3
+          HTML dominio Diseñador
+        %h3
+          Pragmático
+      %section
+        %h2
+          Vistas
+        %h3
+          Presentan la información
+        %h3
+          No deben buscar información
+        %h3
+          Combinables (componentes)
+        %h2
+          Controladores
+        %h3
+          Tienen que ser simples
+      %section
+        %h1
+          Rails + Handlebars
+        %h2
+          deconstruyendo una app
+      %section
+        %h2
+          ¿Qué pasa con Haml, ERB y cia.?
+        %h3
+          Demasiada programación
+        %h3
+          Browser no los entiende o no los procesa
+        %h3
+          Me permiten llegar a la DB
+        %h4.file
+          index_erb.html.erb
+        %h4.file
+          index.html.haml
+      %section
+        %h2
+          ¿Por qué usar handlebars(hbs)?
+        %h3
+          Se parece mucho al HTML
+        %h3
+          Browser lo entiende
+        %h3
+          Javascript lo compila
+        %h3
+          No me permite programar
+        %h4.file
+          index_hbs.html.hbs
+      %section
+        %h1
+          Server Side
+      %section
+        %h2
+          Estilo Rails
+        %h3
+          Controladores simples
+        %h4.file
+          animals_controler.rb
+        %h3
+          Vistas en app
+        %h4.file
+          _animal.html.hbs
+        %h3
+          Dependencias
+        %h4.file
+          Gemfile
+      %section
+        %h2
+          Controladores
+        %h3
+          Preparan la información
+        %h3
+          Listos para la API
+        %h3
+          Simples de usar y programar
+        %h4.file
+          animals_controler.rb
+      %section
+        %h2
+          Magia en render_multi_view
+        %h3
+          Genera un JSONf
+        %h3
+          Responde con HTML o JSON
+        %h3
+          Funciona con partials
+        %h3
+          Independiza la tecnología de templates
+        %h4.file
+          application_controler.rb
+      %section
+        %h2
+          Handlebars en Rails
+        %h3
+          Nuevo tipo de Handler
+        %h3
+          Utiliza la rubygem 'hbs'
+        %h3
+          Utiliza therubyracer (V8)
+        %h3
+          Utiliza handlebars.js
+        %h4.file
+          template_handlebars.rb
+      %section
+        %h2
+          Render de un Handlebar
+        %h3
+          Registrar helpers y partials
+        %h3
+          Cargar el template
+        %h3
+          Compilar el template
+        %h3
+          Ejecutar el template con un contexto
+        %h4.file
+          handlebars.rb
+      %section
+        %h1
+          Client Side
+      %section
+        %h2
+          Estilo jQuery
+        %h3
+          Scripts simples
+        %h4.file
+          animals.js
+        %h3
+          Vistas en app
+        %h4.file
+          animals.hbs
+        %h3
+          Dependencias
+        %h4.file
+          handlebars.js
+      %section
+        %h2
+          Extras
+        %h3
+          I18n
+        %h4.file
+          _animal.html.hbs
+        %h4.file
+          handlebars-helpers.js
+        %h3
+          Automático con I18n-js
+        %h4.file
+          Gemfile
+      %section
+        %h2
+          Problemas
+        %h3
+          Sprockets y la dependencia de vistas
+        %h3
+          Gem 'hbs' y la dependencia de handlebars.js
+        %h3
+          Duplicación de funcionalidad
+        %p
+          Helpers deben ser JS + Ruby
+      %section
+        %h2
+          Futuro
+        %h1
+          Lingerie.js
+        %h3
+          Aunque se vea poco, ahí está
         %h4
-          Porque mi aplicación vive en el cliente, pero es un sitio web
-        %article
-          %p
-            %ul
-              %li
-                abusaremos de las actualizaciones AJAX
-              %li
-                datos en JSON nos permite reutilizarlos en la API (REST)
-              %li
-                más
-
+          Comodidad, elegancia, estilo, belleza
+      %section
+        %h2
+          Otros pensamientos
+        %h3
+          Compatible con Node.js y Backbone.js 
+        %h5
+          (estúpido, pero marketinero)
+        %h3
+          Distribuible / Escalable
+        %h5
+          Un server recibe el JSON y hace el render en base a hbs compilados
+      %section
+        %h2
+          Preguntas
+        %h2
+          Cervezas
     %script(src="../kinout/src-client/javascripts/Kinout.js")
     %script(src="../kinout/src-client/javascripts/kinout.Core.js")
     %script(src="../kinout/src-client/javascripts/kinout.Dom.js")

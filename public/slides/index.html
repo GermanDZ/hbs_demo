@@ -13,35 +13,320 @@
 <body>
 <div class="kinout">
 <section>
-<h1>
-Handlebars on Rails
+<h1 class="handlebars_logo">
+Handlebars
+</h1>
+<h1 class="handlebars_logo_subtitle">
+on
+<span class="mark">Rails</span>
 </h1>
 <h4>
-Templates are evil
+{{templates are evil}}
+</h4>
+<p>
+madrid.rb
+</p>
+<p>
+26-Ene-2012 - GermanDZ
+</p>
+</section>
+<section>
+<h1 class="logo-1up">
+1uptalent
+<img src="assets/images/gdz_2012.png">
+</h1>
+<h2 class="alt">
+¿Por qué?
+</h2>
+<h3>
+Aplicación vs CMS
+</h3>
+<h3>
+AJAX vs ServerSide
+</h3>
+<h3>
+HTML dominio Diseñador
+</h3>
+<h3>
+Pragmático
+</h3>
+</section>
+<section>
+<h2>
+Vistas
+</h2>
+<h3>
+Presentan la información
+</h3>
+<h3>
+No deben buscar información
+</h3>
+<h3>
+Combinables (componentes)
+</h3>
+<h2>
+Controladores
+</h2>
+<h3>
+Tienen que ser simples
+</h3>
+</section>
+<section>
+<h1>
+Rails + Handlebars
+</h1>
+<h2>
+deconstruyendo una app
+</h2>
+</section>
+<section>
+<h2>
+¿Qué pasa con Haml, ERB y cia.?
+</h2>
+<h3>
+Demasiada programación
+</h3>
+<h3>
+Browser no los entiende o no los procesa
+</h3>
+<h3>
+Me permiten llegar a la DB
+</h3>
+<h4 class="file">
+index_erb.html.erb
+</h4>
+<h4 class="file">
+index.html.haml
 </h4>
 </section>
 <section>
+<h2>
+¿Por qué usar handlebars(hbs)?
+</h2>
 <h3>
-¿Por qué no usar Haml, ERB u otros?
+Se parece mucho al HTML
+</h3>
+<h3>
+Browser lo entiende
+</h3>
+<h3>
+Javascript lo compila
+</h3>
+<h3>
+No me permite programar
+</h3>
+<h4 class="file">
+index_hbs.html.hbs
+</h4>
+</section>
+<section>
+<h1>
+Server Side
+</h1>
+</section>
+<section>
+<h2>
+Estilo Rails
+</h2>
+<h3>
+Controladores simples
+</h3>
+<h4 class="file">
+animals_controler.rb
+</h4>
+<h3>
+Vistas en app
+</h3>
+<h4 class="file">
+_animal.html.hbs
+</h4>
+<h3>
+Dependencias
+</h3>
+<h4 class="file">
+Gemfile
+</h4>
+</section>
+<section>
+<h2>
+Controladores
+</h2>
+<h3>
+Preparan la información
+</h3>
+<h3>
+Listos para la API
+</h3>
+<h3>
+Simples de usar y programar
+</h3>
+<h4 class="file">
+animals_controler.rb
+</h4>
+</section>
+<section>
+<h2>
+Magia en render_multi_view
+</h2>
+<h3>
+Genera un JSONf
+</h3>
+<h3>
+Responde con HTML o JSON
+</h3>
+<h3>
+Funciona con partials
+</h3>
+<h3>
+Independiza la tecnología de templates
+</h3>
+<h4 class="file">
+application_controler.rb
+</h4>
+</section>
+<section>
+<h2>
+Handlebars en Rails
+</h2>
+<h3>
+Nuevo tipo de Handler
+</h3>
+<h3>
+Utiliza la rubygem 'hbs'
+</h3>
+<h3>
+Utiliza therubyracer (V8)
+</h3>
+<h3>
+Utiliza handlebars.js
+</h3>
+<h4 class="file">
+template_handlebars.rb
+</h4>
+</section>
+<section>
+<h2>
+Render de un Handlebar
+</h2>
+<h3>
+Registrar helpers y partials
+</h3>
+<h3>
+Cargar el template
+</h3>
+<h3>
+Compilar el template
+</h3>
+<h3>
+Ejecutar el template con un contexto
+</h3>
+<h4 class="file">
+handlebars.rb
+</h4>
+</section>
+<section>
+<h1>
+Client Side
+</h1>
+</section>
+<section>
+<h2>
+Estilo jQuery
+</h2>
+<h3>
+Scripts simples
+</h3>
+<h4 class="file">
+animals.js
+</h4>
+<h3>
+Vistas en app
+</h3>
+<h4 class="file">
+animals.hbs
+</h4>
+<h3>
+Dependencias
+</h3>
+<h4 class="file">
+handlebars.js
+</h4>
+</section>
+<section>
+<h2>
+Extras
+</h2>
+<h3>
+I18n
+</h3>
+<h4 class="file">
+_animal.html.hbs
+</h4>
+<h4 class="file">
+handlebars-helpers.js
+</h4>
+<h3>
+Automático con I18n-js
+</h3>
+<h4 class="file">
+Gemfile
+</h4>
+</section>
+<section>
+<h2>
+Problemas
+</h2>
+<h3>
+Sprockets y la dependencia de vistas
+</h3>
+<h3>
+Gem 'hbs' y la dependencia de handlebars.js
+</h3>
+<h3>
+Duplicación de funcionalidad
+</h3>
+<p>
+Helpers deben ser JS + Ruby
+</p>
+</section>
+<section>
+<h2>
+Futuro
+</h2>
+<h1>
+Lingerie.js
+</h1>
+<h3>
+Aunque se vea poco, ahí está
 </h3>
 <h4>
-Porque mi aplicación vive en el cliente, pero es un sitio web
+Comodidad, elegancia, estilo, belleza
 </h4>
-<article>
-<p>
-<ul>
-<li>
-abusaremos de las actualizaciones AJAX
-</li>
-<li>
-datos en JSON nos permite reutilizarlos en la API (REST)
-</li>
-<li>
-más
-</li>
-</ul>
-</p>
-</article>
+</section>
+<section>
+<h2>
+Otros pensamientos
+</h2>
+<h3>
+Compatible con Node.js y Backbone.js
+</h3>
+<h5>
+(estúpido, pero marketinero)
+</h5>
+<h3>
+Distribuible / Escalable
+</h3>
+<h5>
+Un server recibe el JSON y hace el render en base a hbs compilados
+</h5>
+</section>
+<section>
+<h2>
+Preguntas
+</h2>
+<h2>
+Cervezas
+</h2>
 </section>
 </div>
 <script src="../kinout/src-client/javascripts/Kinout.js"></script>

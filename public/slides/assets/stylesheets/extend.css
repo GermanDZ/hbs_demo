@@ -1,2 +1,38 @@
-.kinout mark {
-  color: blue; }
+.kinout .handlebars_logo {
+  background: url("../images/handlebars_logo.png") no-repeat center top;
+  margin-top: 5%;
+  height: 250px;
+  text-indent: -9999px; }
+.kinout .handlebars_logo_subtitle {
+  margin-top: 0;
+  font-size: 3em; }
+.kinout .logo-1up {
+  margin-top: 5%;
+  background: url("../images/1up.png") no-repeat 73px -43px;
+  background-size: 90%;
+  background-color: rgba(255, 255, 255, 0.85);
+  text-indent: -9999px;
+  height: 140px;
+  margin-left: 220px;
+  margin-right: 220px;
+  border-radius: 40px; }
+  .kinout .logo-1up img {
+    height: 100px;
+    margin-top: -85px;
+    margin-left: 19px;
+    border-radius: 20px; }
+.kinout .mark {
+  color: red; }
+.kinout h1 {
+  margin-top: 100px; }
+.kinout h2 {
+  margin-top: 100px;
+  margin-bottom: 50px; }
+  .kinout h2.alt {
+    margin-top: 50px; }
+.kinout h3 {
+  margin-top: 20px; }
+.kinout h4.file {
+  margin-top: 20px;
+  color: green;
+  font-family: monospace; }
