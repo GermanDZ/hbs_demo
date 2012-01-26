@@ -5,7 +5,7 @@ gem 'rails', '3.1.1'
 gem 'pg'
 gem 'haml'
 
-gem 'hbs'
+gem 'hbs', :git => 'git://github.com/GermanDZ/handlebars.rb.git', :submodules => true
 
 gem 'i18n-js', :git => 'git://github.com/fnando/i18n-js.git'
 
