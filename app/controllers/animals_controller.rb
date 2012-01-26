@@ -20,7 +20,7 @@ class AnimalsController < ApplicationController
   def index_erb
     @animals = []
     @animals << Animal.new({name: "Ed", taxonomy: "mammal", order: "perissodactyla", family: "equidae"})
-    @animals << Animal.new({name: "Cattie", taxonomy: "mammal", order: "carnivora", family: "felidae"})
+    @animals << Animal.new({name: "Flora", taxonomy: "mammal", order: "carnivora", family: "felidae"})
   end
 
 end
