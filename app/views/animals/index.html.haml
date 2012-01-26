@@ -12,4 +12,9 @@
 .addnew
   Cat name:
   %input{id: "name"}
-  %a{href: "#add", id:"add-button"} Add
+  %a{href: "#add", id:"add-button"}
+    =t('add')
+
+.language-bar
+  %a{href: url_for(locale: 'es')} Castellano
+  %a{href: url_for(locale: 'en')} English

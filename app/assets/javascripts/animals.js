@@ -11,7 +11,7 @@ var renderAnimal = function(animal) {
 
 var retrieveAnimals = function() {
   $.ajax({
-    url: '/animals',
+    url: '/animals/index',
     dataType: 'json',
     success: showAnimals
   });
