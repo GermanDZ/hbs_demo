@@ -7,4 +7,8 @@ class Animal
     self.order = attrs[:order]
     self.family = attrs[:family]
   end
+
+  def method_with_db_access
+    'some data from DB'
+  end
 end
