@@ -1,0 +1,14 @@
+<h1>ZOO (from a ERB template)</h1>
+<div class="animals">
+  This is the zoo"s animals list:
+  <ul id="animals-list">
+    <% @animals.each do |animal| %>
+      <%= render partial: "animal_erb", locals: {animal: animal}%>
+    <% end %>
+  </ul>
+</div>
+<a href="#load" id="retrieve-button">Retrieve animals</a>
+<div class="addnew">
+  Cat name: <input id="name">
+  <a href="#add" id="add-button"><%= t('add')%></a>
+</div>
