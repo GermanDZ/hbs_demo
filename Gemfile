@@ -5,7 +5,7 @@ gem 'rails', '3.1.1'
 gem 'pg'
 gem 'haml'
 
-gem 'hbs_plus'
+gem 'hbs_plus' # replacement for 'hbs' to support partials
 
 gem 'i18n-js', :git => 'git://github.com/fnando/i18n-js.git'
 
