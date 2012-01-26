@@ -28,7 +28,7 @@ class ActionView::Template::Handlers::Handlebars
       end
       I18n.translate(context['hash']['key'], params)
     end
-
+    Handlebars.register_partial('footer', '<div class="footer">Copyleft 2012 - madrid.rb</div>')
     @@alreadyInitialized = true
   end
 
@@ -44,7 +44,6 @@ class ActionView::Template::Handlers::Handlebars
   end
 
   def self.template(path, name)
-    Handlebars.register_partial('footer', '<div class="footer">Copyleft 2012 - madrid.rb</div>')
     templates[name] ||= ActionView::Template::Handlers::Handlebars.compile_template(path, name)
   end
 
