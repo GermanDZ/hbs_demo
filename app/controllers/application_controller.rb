@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def from_json_view(options = {})
-    template = options[:template] || "#{params[:action]}.json.erb"
+    template = options[:template] || "#{params[:action]}.json"
     json = JSON::parse render_to_string(template, layout: false)
     json.each_pair do |key, value|
       instance_variable_set("@#{key}", value)
@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     layout = options[:layout] || true
     respond_to do |wants|
       wants.html do
-        from_json_view(template: "#{template_json}.json.erb")
+        from_json_view(template: "#{template_json}.json")
         render action, layout: layout
       end
       wants.json { render action }
